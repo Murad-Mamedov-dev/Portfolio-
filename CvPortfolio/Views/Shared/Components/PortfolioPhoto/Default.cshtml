@@ -1,0 +1,41 @@
+﻿@model IEnumerable<PortfolioPhotoViewModel>
+
+<!--// Portfolio Start //-->
+<section class="section my-portfolio pb-minus-70" id="portfolio" data-scroll-index="4">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-7 col-sm-12">
+                <h3 class="section-title">My<span>Portfolio</span></h3>
+                <hr class="section-line-border">
+                <p class="section-sub-line">I attach importance to simplicity in design Take a look at my projects and decide.</p>
+            </div>
+        </div>
+        <vc:cate></vc:cate>
+
+        <div class="gallery-masonary portfolio-grid row" id="masonaryGallery">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-6 col-lg-4 glry-item col-sm-12 @item.PortfolioLevel.Land">
+                    <div class="portfolio-inner">
+                        <div class="portfolio-back">
+                            <div class="portfolio-buttons">
+                                <a href="~/Uploads/@item.Photo" class="portfolio-zoom-link">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                              
+                                <a  asp-controller="Detail" asp-action="Index" asp-route-id="@item.PortfolioDetail.Id">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="~/Uploads/@item.Photo" alt="Portfolio Img" class="img-fluid portfolio-img">
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+<!--// Portfolio End //-->

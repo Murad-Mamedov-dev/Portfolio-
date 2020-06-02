@@ -1,0 +1,25 @@
+﻿
+@model IEnumerable<PortCateViewModel>
+
+
+
+<div class="text-center">
+    <div class="portfolio-filter d-flex align-items-center justify-content-center">
+        @foreach (var item in Model)
+        {
+            if (item.Name == item.Land)
+            {
+                <a href="#0" data-gallery-filter=".@item.Land" class="@item.ModifiedBy">@item.Name</a>
+            }
+            else
+            {
+                <a href="#0" data-gallery-filter="@item.Land" class="@item.ModifiedBy">@item.Name</a>
+            }
+
+        }
+
+
+
+    </div>
+</div>
+

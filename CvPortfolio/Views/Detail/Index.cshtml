@@ -1,0 +1,36 @@
+﻿
+
+<!--// Breadcrumb Start //-->
+<div class="breadcrumb-section jarallax" data-jarallax data-speed="0.6s" data-scroll-index="1">
+    <img class="jarallax-img" src="/img/breadcrumb-img.jpg" alt="Bread Crumb Img">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7">
+                <h2 class="breadcrumb-title">Portfolio Details</h2>
+                <ul class="breadcrumb-links">
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-active">Portfolio Details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb End //-->
+<!--// Portfolio Details Start //-->
+<section class="portfolio-single section" data-scroll-index="1">
+    <div class="container">
+
+        <partial name="CaptionPhoto/_Detail" />
+
+        <div class="comments-section-wrap">
+            <div class="row">
+                <vc:user></vc:user>
+
+
+                <partial name="CaptionPhoto/_User" />
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--// Portfolio Details End //-->

@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<CaptionViewModel>
+
+@foreach (var item in Model)
+{
+    <section class="hero-banner bg-overlay jarallax" data-jarallax="" data-speed="0.6s" data-scroll-index="1">
+        <partial name="CaptionPhoto/_PhotoCaption" model="item" />
+    </section>
+
+
+
+
+
+}
+
+
+

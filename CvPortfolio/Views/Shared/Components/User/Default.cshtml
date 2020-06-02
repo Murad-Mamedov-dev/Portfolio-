@@ -1,0 +1,59 @@
+﻿@model IEnumerable<UserViewModel>
+    <style>
+        .lass {
+           
+           
+            height: 350px;
+            overflow: auto;
+         
+            
+        }
+            .lass::-webkit-scrollbar {
+                width: 14px;
+           
+            }
+            .lass::-webkit-scrollbar-thumb {
+                background: #E64800;
+                border-radius: 10px;
+            }
+            .lass::-webkit-scrollbar-track {
+                background-color: dimgrey;
+                border-radius: 10px;
+            }
+    
+        
+
+        
+            
+    
+    </style>
+
+<div class="col-md-12 col-lg-7" style="margin-bottom:10px">
+    <div class="comments-head">
+        <b class="comment-title"><span class="fa fa-comment"></span>Comments (@Model.Count())</b>
+    </div>
+    <div class="lass" >
+   
+        <div class="portfolio-comment-box">
+            @foreach (var item in Model)
+            {<div class="media comments-item">
+
+                    <div class="media-body">
+                        <h6>@item.Name</h6>
+                        <p>
+                            @item.Comment
+                        </p>
+                        <p style="        background-color: gainsboro;
+        color: #FF5000;
+        width: 19%;
+        border-radius: 6px
+    ">@item.AddedDate.ToString("yy-MM-dd hh:mm")</p>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+    </div>
+</div>

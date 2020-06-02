@@ -1,0 +1,23 @@
+﻿@model RouteDetailViewModel
+
+
+<div class="col-md-12 col-lg-7">
+    <div class="leave-comment-wrapper">
+        <div class="comments-head">
+            <b class="comment-title"><span class="far fa-comment-dots"></span>Leave A Comment</b>
+        </div>
+        <form method="post">
+            <div class="row">
+                <div class="comment-form-group col-md-12">
+                    <input type="text" class="comment-form-control" placeholder="Name" required="" asp-for="User.Name">
+                </div>
+                <div class="comment-form-group col-md-12">
+                    <textarea asp-for="User.Comment" class="comment-form-control text-area" cols="30" rows="9" placeholder="Your Message" required=""></textarea>
+                </div>
+                <div class="comment-form-group mb-0 col-md-12">
+                    <button type="submit" class="default-orange-btn">Send Message</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

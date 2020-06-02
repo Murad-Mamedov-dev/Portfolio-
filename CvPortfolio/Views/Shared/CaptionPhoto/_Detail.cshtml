@@ -1,0 +1,36 @@
+﻿@model RouteDetailViewModel
+
+<div class="row">
+    <div class="col-md-12 col-lg-7">
+        <div class="portfolio-img-slider owl-carousel owl-theme">
+            @foreach (var item in Model.Detail.Photos)
+            {
+                <div class="item">
+                    <img src="~/Uploads/@item.Photo" alt="Project Image" class="img-fluid">
+                </div>
+            }
+
+
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-5">
+        <div class="portfolio-info">
+            <h4> @Model.Detail.Title</h4>
+            <p>
+             @Model.Detail.Detail
+            </p>
+          
+        </div>
+        <div class="portfolio-details">
+            <ul>
+                <li><span>Client</span>@Model.Detail.Client</li>
+                <li><span>Created By</span>@Model.Detail.CreatedBy</li>
+                <li><span>Category</span>@Model.Detail.ModifiedBy</li>
+                <li><span>Created Date</span>@Model.Detail.AddedDate.ToString("yyyy-MM-dd")</li>
+                <li><span>End Date</span>@Model.Detail.ModifiedDate.ToString("yyyy-MM-dd")</li>
+                <li><span>Price</span>@Model.Detail.Price ₼</li>
+            </ul>
+           <!-- //  <a href="#" class="default-orange-btn mr-2">Live Demo</a>//-->
+        </div>
+    </div>
+</div>

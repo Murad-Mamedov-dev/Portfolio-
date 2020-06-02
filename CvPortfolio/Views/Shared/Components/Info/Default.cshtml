@@ -1,0 +1,52 @@
+﻿@model InfoViewModel
+@{
+    ViewData["Title"] = "Default";
+}
+
+<section class="about section" id="about-me" data-scroll-index="2">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-6 about-tilt-img col-sm-12 col-lg-6" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+                <div class="about-img-wrap">
+                    <img src="~/Uploads/@Model.Photo.Photo" alt="About image" class="img-fluid about-img-thumb">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-6 about-inner">
+                <h4>
+                    <span> @Model.Title</span>
+                </h4>
+                <p>
+                @Model.Text
+                </p>
+                <ul class="about-list">
+                    <li>
+                        <span class="list-item-title">Name</span>
+                        <span class="list-item-value">@Model.Name</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Address</span>
+                        <span class="list-item-value">@Model.Address</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Age</span>
+                        <span class="list-item-value">@Model.Age</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Email</span>
+                        <span class="list-item-value">@Model.Email</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">University</span>
+                        <span class="list-item-value">@Model.University</span>
+                    </li>
+                    <li>
+                        <span class="list-item-title">Phone</span>
+                        <span class="list-item-value">@Model.Phone</span>
+                    </li>
+                </ul>
+                <a asp-controller="Download" asp-action="Download" class="default-orange-btn">Download Cv</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--// About Me End //-->
